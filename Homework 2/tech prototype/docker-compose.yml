@@ -1,0 +1,47 @@
+version: '3.9'
+services:
+  spring-backend:
+    build:
+      context: ./spring-app
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/stock_database.db
+      SPRING_DATASOURCE_USERNAME: postres
+      SPRING_DATASOURCE_PASSWORD: stefanmilos
+    depends_on:
+      - database
+    networks:
+      - app-network
+
+  react-frontend:
+    build:
+      context: ./react-app
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    stdin_open: true
+    tty: true
+    networks:
+      - app-network
+
+  database:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: stock_database.db
+      POSTGRES_USER: postres
+      POSTGRES_PASSWORD: stefanmilos
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db_data:
