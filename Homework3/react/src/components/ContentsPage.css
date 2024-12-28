@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.contents-page {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#sodrzina-one {
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: papayawhip;
+    letter-spacing: 1px;
+}
+
+.menu-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.menu-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 23%;
+}
+
+.menu-item {
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 70px;
+    position: relative;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    border-color: white;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.5);
+}
+
+.menu-item-content {
+    position: relative;
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.number {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    font-size: 5rem;
+    font-weight: 800;
+    color: #171922;
+    transition: color 0.3s ease;
+    z-index: 1;
+    padding: 0.5rem;
+}
+
+.menu-item:hover .number {
+    color: rgba(128, 128, 128, 0.3);
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 1rem;
+    line-height: 1.4;
+}
+
+.back-button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .menu-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .menu-item-link {
+        width: 100%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: dimgray;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: grey;
+}
+.tableWrapper {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+}
+
+.dataTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.dataTable thead th {
+    background: rgba(99, 179, 237, 0.1);
+    color: #63b3ed;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: left;
+    font-size: 0.875rem;
+    border-bottom: 2px solid rgba(99, 179, 237, 0.2);
+    white-space: nowrap;
+}
+
+.dataTable tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.dataTable tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.dataTable tbody td {
+    padding: 1rem;
+    color: #e2e8f0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.875rem;
+}
+
+.signalBadge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.buy {
+    background: rgba(72, 187, 120, 0.2);
+    color: #48bb78;
+}
+
+.sell {
+    background: rgba(245, 101, 101, 0.2);
+    color: #fc8181;
+}
+
+.hold {
+    background: rgba(237, 137, 54, 0.2);
+    color: #ed8936;
+}
+
+
+.periodSection {
+    margin-bottom: 2rem;
+}
+
+.periodTitle {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
