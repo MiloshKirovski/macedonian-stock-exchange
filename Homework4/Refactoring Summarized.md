@@ -2,12 +2,6 @@
 
 Деталните рефакторирачки промени се дадени во продолжение во 3 секции. Едната се фокусира на Spring делот, друга на React делот и третата ги опфаќа сите три креирани микросервиси од Flask апликацијата (сега 3 посебни апликации) во еден дел.
 
-Крајната добиена архитектура (контејнеризирана и поставена на Cloud) е следната:
-
-![stocks_architecture_final.png](C:\Users\Milos\OneDrive\Desktop\stocks_architecture_final.png)
-
-
-
 ## Flask APP Рефакторирање
 
 **Класата `ModelLoaderFactory` и имплементацијата `SpecificModelLoaderFactory`:**
