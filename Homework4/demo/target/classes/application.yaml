@@ -1,0 +1,8 @@
+app:
+  cors:
+    allowed-origins: "http://react-app:80"
+  flask:
+    api1-url: "http://technical-app:5000/calculate"
+    api2-url: "http://lstm-app:6002/price"
+    api3-url: "http://nlp-app:6001/nlp"
+
