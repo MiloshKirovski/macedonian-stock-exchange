@@ -17,8 +17,6 @@ public class CompanyIndicatorController {
 
     @PostMapping("/calculate")
     public ResponseEntity<TechnicalIndicatorsResponse> calculateIndicators(@RequestBody CompanyData companyData) {
-        System.out.println("IN HERE ");
-        System.out.println("hello " + flaskService);
         try {
             TechnicalIndicatorsResponse response = flaskService.getIndicatorsFromFlask(companyData);
             return new ResponseEntity<>(response, HttpStatus.OK);
