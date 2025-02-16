@@ -10,7 +10,6 @@ const IndicatorForm = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
-    // List of company names
     const companyNames = [
         "ADIN", "ALK", "ALKB", "AMEH", "APTK", "ATPP", "AUMK", "BANA", "BGOR", "BIKF", "BIM", "BLTU",
         "CBNG", "CDHV", "CEVI", "CKB", "CKBKO", "DEBA", "DIMI", "EDST", "ELMA", "ELNC", "ENER", "EUHA",
