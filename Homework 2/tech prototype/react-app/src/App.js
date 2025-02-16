@@ -4,7 +4,6 @@ import HomePage from './components/HomePage';
 import ContentsPage from './components/ContentsPage';
 import List from './components/List';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// Google Fonts import
 
 const App = () => {
     return (
